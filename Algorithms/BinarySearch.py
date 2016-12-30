@@ -11,7 +11,7 @@ def binary_search(a, target):
 	comparisons = 0
 	min = 0
 	max = len(a)
-	while min < max:
+	while min < max: # Will stop once reached smaller number (from left)
 		x = min + (max - min) / 2
 		val = a[x]
 		if target == val:
@@ -20,7 +20,7 @@ def binary_search(a, target):
 			return x
 		elif target > val:
 			comparisons += 1
-			if min == x:
+			if min == x: # Will stop once reached higher number (from right)
 				break
 			min = x
 		elif target < val:
